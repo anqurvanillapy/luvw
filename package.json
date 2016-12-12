@@ -1,0 +1,27 @@
+{
+  "name": "observar",
+  "version": "0.1.0",
+  "description": "A tiny dependency-free two-way data binding library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/anqurvanillapy/observar.git"
+  },
+  "keywords": [
+    "mvvm",
+    "observable"
+  ],
+  "author": "AnqurVanillapy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anqurvanillapy/observar/issues"
+  },
+  "homepage": "https://github.com/anqurvanillapy/observar#readme",
+  "devDependencies": {
+    "babel-preset-babili": "0.0.9",
+    "babel-preset-latest": "^6.16.0"
+  }
+}
