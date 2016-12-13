@@ -1,7 +1,7 @@
-observar
-========
+luvw
+====
 
-*Obser*vable *var*iables.
+A *uvw* (ternary) relation *L*.
 
 **Notice:** code for learning, not for production use.
 
