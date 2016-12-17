@@ -1,26 +1,26 @@
-class Observable {
-  constructor (state, listener) {
-    this.state = state
-    this.listeners = []
+'use strict'
 
-    this.listeners.push(listener)
+class Luvw {
+  constructor (state) {
+    this._state = state
+    this._listeners = []
+  }
+
+  subscribe (listener) {
+    this._listeners.push(listener)
   }
 
   notify (val) {
-    this.listeners.forEach(listener => { listener(val) })
+    this._listeners.forEach(listener => { listener(val) })
   }
 
-  accessor (val) {
-    if (arguments.length && this.state !== val) {
-      this.state = val
+  update (val) {
+    if (arguments.length && this._state !== val) {
+      this._state = val
       this.notify(val)
     }
-    return this.state
+    return this._state
   }
 }
 
-// var obs = new Observable(10)
-// obs.accessor.subscribe(n => { console.log(n) })
-// obs.accessor(12)
-// obs.accessor(12)
-// obs.accessor(14)
+new Luvw()

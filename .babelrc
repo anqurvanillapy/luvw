@@ -1,3 +1,4 @@
 {
-  "presets": ["babili", "latest"]
+  "presets": ["es2015", "babili"],
+  "comments": false
 }
