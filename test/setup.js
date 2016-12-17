@@ -1,6 +1,6 @@
 'use strict'
 
-global.expect = require('expect.js')
+import Luvw from '../_index.js'
 
-console.log(Luvw)
-// TODO: use babelify!!! And checkout how doT does the testing!!
+global.expect = require('expect.js')
+global.Luvw = Luvw

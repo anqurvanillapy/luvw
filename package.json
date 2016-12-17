@@ -1,13 +1,16 @@
 {
   "name": "luvw",
   "version": "0.1.0",
-  "description": "Dependency-free 2-way data binding microlibrary",
+  "description": "Dependency-free two-way data binding microlibrary",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register",
-    "build": "mkdir -p dist && babel --no-babelrc --presets=babili index.js -o dist/luvw.min.js",
-    "watch": "mkdir -p dist && babel index.js -o dist/luvw.min.js --watch",
-    "clean": "rm -rf dist"
+    "test": "bash build/build.sh test",
+    "test:js": "mocha --compilers js:babel-core/register",
+    "build": "bash build/build.sh js",
+    "build:js": "BABEL_ENV=production babel _index.js -o dist/luvw.min.js",
+    "watch": "npm run build -- --watch",
+    "clean": "rm -rf dist",
+    "clean-temp": ""
   },
   "repository": {
     "type": "git",
@@ -28,7 +31,7 @@
     "babel-cli": "^6.18.0",
     "babel-core": "^6.20.0",
     "babel-preset-babili": "0.0.9",
-    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-env": "^1.1.4",
     "expect.js": "^0.3.1",
     "mocha": "^3.2.0"
   }

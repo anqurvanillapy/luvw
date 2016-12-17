@@ -1,4 +1,11 @@
 {
-  "presets": ["es2015", "babili"],
-  "comments": false
+  "comments": false,
+  "env": {
+    "production": {
+      "presets": ["babili"]
+    },
+    "development": {
+      "presets": ["env"]
+    }
+  }
 }

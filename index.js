@@ -22,5 +22,3 @@ class Luvw {
     return this._state
   }
 }
-
-new Luvw()
