@@ -2,26 +2,19 @@ mkdir -p dist
 
 cp index.js _index.js
 
-build_js () {
-    echo "new Luvw()" >> _index.js
-    npm run build:js
-}
-
-build_test () {
-    echo "export default Luvw" >> _index.js
-    npm run test:js
-}
-
 case "$1" in
     "js")
-        build_js
+        package="new Luvw()"
         ;;
     "test")
-        build_test
+        package="export default Luvw"
         ;;
     *)
         echo "invalid build option"
         exit 1
 esac
+
+echo $package >> _index.js
+npm run "build:$1"
 
 rm _index.js

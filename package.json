@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "bash build/build.sh test",
-    "test:js": "mocha --compilers js:babel-core/register",
     "build": "bash build/build.sh js",
     "build:js": "BABEL_ENV=production babel _index.js -o dist/luvw.min.js",
+    "build:test": "mocha --compilers js:babel-core/register",
     "watch": "npm run build -- --watch",
     "clean": "rm -rf dist",
     "clean-temp": ""
